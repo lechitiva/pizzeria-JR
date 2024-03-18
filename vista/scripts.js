@@ -13,6 +13,6 @@ function login() {
   }
   
   function openCreateAccount() {
-    window.open('create-account.html', '_blank');
+    window.open('createAccount.html', '_self');
   }
   

@@ -5,9 +5,20 @@ const path = require('path');
 const app = express();
 const port = 3000;
 
-app.get('/', (req, res)=>{
-    res.sendFile(path.join(__dirname, '../vista/index.html'));
-})
+app.use(express.static(path.join(__dirname, '/../vista')));
 
-app.listen(port);
-console.log('Servidor abierto en el puierto', port);
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '/../vista', 'index.html'));
+});
+
+
+app.use(express.static(path.join(__dirname, '/../vista')));
+
+app.get('/createAccount', (req, res) => {
+    res.sendFile(path.join(__dirname, '/../vista', 'createAccount.html'));
+});
+
+
+app.listen(port, () => {
+    console.log(`Servidor corriendo en http://localhost:${port}`);
+});
