@@ -33,6 +33,21 @@ const pool = new pg.Pool({
     port: 5432,
 })
 
+//Query para obtenre productos de la bd
+app.get('/home', async (req, res) => {
+    const id = req.params.id;
+
+    try {
+        const client = await pool.connect();
+        const result = await client.query('SELECT name, email FROM public.pzz_user WHERE id = 20');
+        const people = result.rows;
+        client.release();
+        res.json(people);
+      } catch (err) {
+        console.error('Error al obtener datos de la base de datos', err);
+        res.status(500).json({ error: 'Error interno del servidor' });
+      }
+});
 
 //Query de Crear cuenta
 app.post('/insertarUsuario', (req, res) => {

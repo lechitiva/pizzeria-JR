@@ -1,4 +1,3 @@
-
 //Funciones de index.html
 function login() {
   const username = document.getElementById('username').value.trim();
@@ -80,3 +79,22 @@ function createAccount() {
 
 }
 
+
+/*************************/
+//Funciones del home
+
+fetch('/home')
+  .then(response => response.json())
+  .then(data => {
+    // Hacer algo con los datos recibidos, como asignarlos a variables
+    const firstPerson = data[0];
+    // Obtener el nombre y el email del primer objeto
+    const name = firstPerson.name;
+    const email = firstPerson.email;
+    // Luego, puedes utilizar estas variables en diferentes partes de tu página HTML
+    document.getElementById('nombre123').innerText = name;
+    /*document.getElementById('age').innerText = age;*/
+    console.log(data);
+    console.log(data.name);
+  })
+  .catch(error => console.error('Error al obtener datos:', error));
