@@ -1,87 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menú de Pizzería</title>
-  
-  <style>
-body {
-    font-family: Arial, sans-serif;
-    background-image:url('fondo.png');
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-  
-  .container {
-    background-color: #c1cbd1;
-    border-radius: 5px;
-    padding: 40px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    width: 1000px;
-    text-align: left; 
-  } 
-  .botones {text-align: center;}
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: #333;
-  }
-  
-  label {
-    display: block;
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-    color: #555;
-  }
-  
-  input[type="text"],
-  input[type="email"],
-  input[type="password"] {
-    width: 100%;
-    padding: 15px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-bottom: 25px;
-    box-sizing: border-box;
-  }
-  
-  button[type="button"] {
-    background-color: #a71616 ;
-    color: #fff;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button[type="button"]:hover {
-    background-color: #a71616;
-  }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzería JR</title>
+    <link rel="stylesheet" href="style_menu.css">
 </head>
 <body>
-  <header>
+    <header>
+        <p id="usuario"> Bienvenido: <span id="nombre123"></span></p>
+        <h1 class="titulo-principal">Pizzería JR</h1>
+        <nav class="menu">
+            <ul>
+                <li><a onclick="mostrarProductos()">Productos</a></li>
+                <li><a onclick="mostrarPromociones()">Promociones</a></li>
+                <li><a onclick="mostrarPedidos()">Pedidos</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <div class="container" align="center">
-    <h1 align="center">Menú de PizzeríaJR</h1>
-    <div class="product">
-      <h2>Pizza</h2>
-      <p>Deliciosa pizza</p>
-      <p>Precio: <span id="nombre123"></span></p>
-    </div>
-    <div class="product">
-      <h2>Hamburguesa</h2>
-      <p>Hamburguesa clásica</p>
-      <p>Precio: 8.000</p>
-    </div>
-    <!-- Agrega más productos según sea necesario -->
-  </div>
+    <main id="contenido">
+        <!-- El contenido se mostrará dinámicamente aquí -->
+    </main>
 
-  <script src="scripts.js"></script>
+    
+
+    <footer>
+        <p>&copy; 2024 Pizzería JR</p>
+    </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
