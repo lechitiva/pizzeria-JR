@@ -122,22 +122,22 @@ function createAccount() {
 //Funciones del home.html
 
 const productos = [
-  { nombre: 'Hamburguesa Sencilla', precio: 8 },
-  { nombre: 'Hamburguesa Doble', precio: 12 },
-  { nombre: 'Hamburguesa con Queso', precio: 10 },
-  { nombre: 'Hamburguesa con Bacon', precio: 10 },
-  { nombre: 'Pizza Margarita', precio: 12 },
-  { nombre: 'Pizza Pepperoni', precio: 15 },
-  { nombre: 'Pizza Hawaiana', precio: 14 },
-  { nombre: 'Papas Fritas Pequeñas', precio: 4 },
-  { nombre: 'Papas Fritas Medianas', precio: 5 },
-  { nombre: 'Papas Fritas Grandes', precio: 6 }
+  { imagen: 'imagenes/icono.jpeg  ', nombre: 'Hamburguesa Sencilla', precio: 6000 },
+  { imagen: 'imagenes/icono2.jpeg', nombre: 'Hamburguesa Doble', precio: 8000 },
+  {imagen: 'imagenes/icono3.jpeg', nombre: 'Hamburguesa con Queso', precio: 10000 },
+  { imagen: 'imagenes/icono4.jpeg', nombre: 'Hamburguesa con Bacon', precio: 10000 },
+  { imagen: 'imagenes/icono4.jpeg', nombre: 'Pizza Margarita', precio: 5000 },
+  { imagen: 'imagenes/icono6.jpeg', nombre: 'Pizza Pepperoni', precio: 5000 },
+  { imagen: 'imagenes/icono7.jpeg', nombre: 'Pizza Hawaiana', precio: 5000 },
+  { imagen: 'imagenes/icono8.jpeg', nombre: 'Papas Fritas Pequeñas', precio: 7000 },
+  { imagen: 'imagenes/icono9.jpeg', nombre: 'Papas Fritas Medianas', precio: 7000 },
+  {imagen: 'imagenes/icono10.jpeg', nombre: 'Papas Fritas Grandes', precio: 7000 }
 ];
 
 const promociones = [
-  { nombre: 'Combo Hamburguesa + Papas', precio: 12 },
-  { nombre: 'Pizza Grande + Bebida', precio: 18 },
-  { nombre: 'Combo Familiar (Pizza + Hamburguesa + Papas)', precio: 25 }
+  { imagen: 'imagenes/icono11.jpeg  ', nombre: 'Combo Hamburguesa + Papas', precio: 12000 },
+  { imagen: 'imagenes/icono12.jpeg  ', nombre: 'Pizza Grande + Bebida', precio: 32000 },
+  { imagen: 'imagenes/icono13.jpeg  ', nombre: 'Combo Familiar (Pizza + Hamburguesa + Papas)', precio: 25000 }
 ];
 
 let pedidos = [];
@@ -152,6 +152,7 @@ function mostrarProductos() {
       const itemProducto = document.createElement('div');
       itemProducto.classList.add('producto');
       itemProducto.innerHTML = `
+          <img src="${producto.imagen}" style="width: 100px; height: 100px;">
           <h3>${producto.nombre}</h3>
           <p>Precio: $${producto.precio}</p>
           <button onclick="agregarAlPedido('${producto.nombre}', ${producto.precio})">Agregar al Pedido</button>
@@ -172,6 +173,7 @@ function mostrarPromociones() {
       const itemPromocion = document.createElement('div');
       itemPromocion.classList.add('promocion');
       itemPromocion.innerHTML = `
+          <img src="${promocion.imagen}" style="width: 100px; height: 100px;">
           <h3>${promocion.nombre}</h3>
           <p>Precio: $${promocion.precio}</p>
           <button onclick="agregarAlPedido('${promocion.nombre}', ${promocion.precio})">Agregar al Pedido</button>
