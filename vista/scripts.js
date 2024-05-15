@@ -126,7 +126,7 @@ const productos = [
   { imagen: 'imagenes/icono2.jpeg', nombre: 'Hamburguesa Doble', precio: 8000 },
   {imagen: 'imagenes/icono3.jpeg', nombre: 'Hamburguesa con Queso', precio: 10000 },
   { imagen: 'imagenes/icono4.jpeg', nombre: 'Hamburguesa con Bacon', precio: 10000 },
-  { imagen: 'imagenes/icono4.jpeg', nombre: 'Pizza Margarita', precio: 5000 },
+  { imagen: 'imagenes/icono5.jpeg', nombre: 'Pizza Margarita', precio: 5000 },
   { imagen: 'imagenes/icono6.jpeg', nombre: 'Pizza Pepperoni', precio: 5000 },
   { imagen: 'imagenes/icono7.jpeg', nombre: 'Pizza Hawaiana', precio: 5000 },
   { imagen: 'imagenes/icono8.jpeg', nombre: 'Papas Fritas Pequeñas', precio: 7000 },
@@ -139,6 +139,11 @@ const promociones = [
   { imagen: 'imagenes/icono12.jpeg  ', nombre: 'Pizza Grande + Bebida', precio: 32000 },
   { imagen: 'imagenes/icono13.jpeg  ', nombre: 'Combo Familiar (Pizza + Hamburguesa + Papas)', precio: 25000 }
 ];
+
+function cerrarSesion() {
+  window.location.href = "index.html"; // Cambiar "cerrar_sesion.html" por la URL de tu otra página HTML
+}
+
 
 let pedidos = [];
 
